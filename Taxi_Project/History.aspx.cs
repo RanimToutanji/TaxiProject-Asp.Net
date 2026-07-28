@@ -9,14 +9,21 @@ namespace Taxi_Project
     public partial class History : Page
     {
         private readonly string cs =
+
+        
             @"Data Source=(LocalDB)\MSSQLLocalDB;" +
             @"AttachDbFilename=C:\Users\user\OneDrive\Desktop\I3332\asp.net\Taxi_Project\App_Data\Taxi_DB.mdf;" +
             @"Integrated Security=True;Connect Timeout=30;Encrypt=False";
+            
 
         private SqlConnection GetConnection() => new SqlConnection(cs);
 
         protected void Page_Load(object sender, EventArgs e)
+
+        
         {
+
+        
             if (Session["UserID"] == null)
             {
                 Response.Redirect("Login.aspx");
